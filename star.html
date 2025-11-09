@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bintang Besar Bergerak</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #0d0b3b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background-color: #FFD700;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: moveStar 5s linear infinite, sparkle 1.5s infinite alternate;
+        }
+
+        @keyframes moveStar {
+            0% {
+                top: -100px;
+                left: -100px;
+            }
+            100% {
+                top: 100vh;
+                left: 100vw;
+            }
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="star"></div>
+    <div class="star" style="animation-delay: 1s;"></div>
+    <div class="star" style="animation-delay: 2s;"></div>
+    <div class="star" style="animation-delay: 3s;"></div>
+    <div class="star" style="animation-delay: 4s;"></div>
+</body>
+</html>
